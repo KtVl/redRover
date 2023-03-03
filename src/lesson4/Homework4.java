@@ -1,10 +1,10 @@
-package lesson3;
+package lesson4;
 
-public class Homework3_2 {
+public class Homework4 {
     public static void main(String[] args) {
 //        task1();
-//        task2();
-        task3();
+        task2();
+//        task3();
     }
 
     //Необходимо вывести числа от 0 до 15
@@ -19,7 +19,7 @@ public class Homework3_2 {
     //Необходимо вывести все положительные степени числа 5 которые меньше 10_000, вывести результат возведения в степень
     public static void task2() {
         int number = 5;
-        int result = 1;      // Результат возведения в степень
+        int result = 5;      // Результат возведения в степень
         int pow = 1;        // Начальный показатель степени
         do {
             System.out.println(number + " в степени " + pow + " = " + result);
