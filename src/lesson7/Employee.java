@@ -13,8 +13,8 @@ public class Employee {
         this.salary = salary;
     }
 
-    public boolean isSameName(Employee worker1) {
-        if (this.name.equals(worker1.name)) {
+    public boolean isSameName(Employee employee1) {
+        if (this.name.equals(employee1.name)) {
             return true;
         }
         return false;
