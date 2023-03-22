@@ -2,7 +2,7 @@ package lesson7;
 
 public class Homework7 {
     public static void main(String[] args) {
-        task2();
+        task3();
         }
 
 
@@ -40,5 +40,19 @@ public class Homework7 {
         System.out.println(employee1.isSameName(employee1));
         System.out.println(employee1.isSameName(employee2));
         System.out.println(employee1.isSameName(employee3));
+        }
+
+    public static void task3() {
+        // Необходимо создать класс Salary с единственным методом -
+        // getSum(Employee[] employeeArray), метод должен возвращать сумму
+        // зарплат всех сотрудников из массива переданного в качестве аргумента вызова метода.
+
+        Salary[] employeeArray = {
+                new Salary(22_500),
+                new Salary(23_000),
+                new Salary(21_000),
+                new Salary(55_500),
+        };
+        System.out.println(Salary.sumSalary(employeeArray));
         }
     }
