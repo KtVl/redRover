@@ -47,4 +47,36 @@ public class Util {
             }
         } return max;
     }
+
+    //поиск наименьшего количества подчиненных в массиве менеджеров
+    public static int minCountOfSubordinates(Worker[] manager) {
+        int min = manager[0].getNumberOfSubordinates();
+        for (int i = 0; i < manager.length; i ++){
+            if (min > manager[i].getNumberOfSubordinates()) {
+                min = manager[i].getNumberOfSubordinates();
+            }
+        } return min;
+    }
+
+    //поиск наибольшего количества подчиненных в массиве менеджеров
+    public static int maxCountOfSubordinates(Worker[] manager) {
+        int min = manager[0].getNumberOfSubordinates();
+        for (int i = 0; i < manager.length; i ++){
+            if (min < manager[i].getNumberOfSubordinates()) {
+                min = manager[i].getNumberOfSubordinates();
+            }
+        } return min;
+    }
+
+    //поиск наибольшей надбавки (разнице между базовой зарплатой и выплатой) в массиве менеджеров
+    public static double maxAllowance(Worker[] manager) {
+        double allowance = (manager[0].baseSalary + manager[0].baseSalary / 100  * maxCountOfSubordinates(manager) * 3) - manager[0].baseSalary;
+        return allowance;
+    }
+
+    //поиск наименьшей надбавки (разнице между базовой ставки и зарплатой) в массиве менеджеров
+    public static double minAllowance(Worker[] manager) {
+        double allowance = (manager[0].baseSalary + manager[0].baseSalary / 100  * minCountOfSubordinates(manager) * 3) - manager[0].baseSalary;
+        return allowance;
+    }
 }

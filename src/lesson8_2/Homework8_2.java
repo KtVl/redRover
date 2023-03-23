@@ -38,10 +38,21 @@ public class Homework8_2 {
                 new Employee("Nina", 55_500),
         };
 
+        Worker[] manager = {
+                new Manager("Alex", 40_000, 8),
+                new Manager("Alex1", 40_000, 2),
+                new Manager("Alex2", 40_000, 6),
+                new Manager("Alex3", 40_000, 1)
+        };
+
         System.out.println(Util.searchByName("Anna", employees));
         System.out.println(Util.searchSubByName("ex", employees));
         System.out.println("сумма зарплат всех работников: " + Util.sumSalary(employees));
         System.out.println("наименьшаяя зп в массиве: " + Util.minSalary(employees));
         System.out.println("наибольшая зп в массиве: " + Util.maxSalary(employees));
+        System.out.println("наименьшее количество подчиненных: " + Util.minCountOfSubordinates(manager));
+        System.out.println("наибольшее количество подчиненных: " + Util.maxCountOfSubordinates(manager));
+        System.out.println("наибольшая надбавка: " + Util.maxAllowance(manager));
+        System.out.println("наименьшая надбавки: " + Util.minAllowance(manager));
     }
 }

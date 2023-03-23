@@ -1,14 +1,16 @@
 package lesson8_2;
 
 public class Worker extends Employee {
-    private int SalaryWorker;
 
-    public Worker(String name, int baseSalary, int salaryWorker) {
+    private int numberOfSubordinates;
+
+    public Worker(String name, int baseSalary, int numberOfSubordinates) {
         super(name, baseSalary);
-        SalaryWorker = salaryWorker;
+        this.numberOfSubordinates = numberOfSubordinates;
     }
 
-    public int getSalaryWorker() {
-        return SalaryWorker;
+    public int getNumberOfSubordinates() {
+        return numberOfSubordinates;
     }
+
 }

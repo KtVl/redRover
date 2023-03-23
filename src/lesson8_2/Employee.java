@@ -2,11 +2,12 @@ package lesson8_2;
 
 public class Employee {
     private String name;
-    private int BaseSalary;
+    int baseSalary;
+
 
     public Employee(String name, int baseSalary) {
         this.name = name;
-        BaseSalary = baseSalary;
+        this.baseSalary = baseSalary;
     }
 
     public String getName() {
@@ -18,10 +19,10 @@ public class Employee {
     }
 
     public int getBaseSalary() {
-        return BaseSalary;
+        return baseSalary;
     }
 
     public void setBaseSalary(int baseSalary) {
-        BaseSalary = baseSalary;
+        baseSalary = baseSalary;
     }
 }
