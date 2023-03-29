@@ -24,26 +24,26 @@ public class Util {
     public static int sumSalary(Employee[] employees){
         int sum = 0;
         for (int i = 0; i < employees.length; i++) {
-            sum += employees[i].getBaseSalary();
+            sum += employees[i].getSalary();
         } return sum;
     }
 
     //поиск наименьшей зарплаты в массиве
     public static int minSalary(Employee[] employees) {
-        int min = employees[0].getBaseSalary();
+        int min = employees[0].getSalary();
         for (int i = 0; i < employees.length; i ++){
-            if (min > employees[i].getBaseSalary()) {
-                min = employees[i].getBaseSalary();
+            if (min > employees[i].getSalary()) {
+                min = employees[i].getSalary();
             }
         } return min;
     }
 
     //поиск наибольшей зарплаты в массиве
     public static int maxSalary(Employee[] employees) {
-        int max = employees[0].getBaseSalary();
+        int max = employees[0].getSalary();
         for (int i = 0; i < employees.length; i ++){
-            if (max < employees[i].getBaseSalary()) {
-                max = employees[i].getBaseSalary();
+            if (max < employees[i].getSalary()) {
+                max = employees[i].getSalary();
             }
         } return max;
     }

@@ -8,7 +8,7 @@ public class Manager extends Worker {
 
     }
 
-    public int getSalaryManager() {
+    public int getSalary() {
         // <базовая ставка> * (<количество подчиненных> / 100 * 3)
         this.baseSalary = baseSalary * (getNumberOfSubordinates() / 100 * 3);
         if (getNumberOfSubordinates() == 0) {

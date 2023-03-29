@@ -18,7 +18,7 @@ public class Employee {
         this.name = name;
     }
 
-    public int getBaseSalary() {
+    public int getSalary() {
         return baseSalary;
     }
 

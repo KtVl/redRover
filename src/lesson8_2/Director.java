@@ -7,7 +7,7 @@ public class Director extends Worker {
         super(name, baseSalary, numberOfSubordinates);
     }
 
-    public int getSalaryDirector() {
+    public int getSalary() {
         // <базовая ставка> * (<количество подчиненных> / 100 * 9)
         this.baseSalary = baseSalary * (getNumberOfSubordinates() / 100 * 9);
         if (getNumberOfSubordinates() == 0) {
