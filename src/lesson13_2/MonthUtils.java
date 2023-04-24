@@ -15,7 +15,6 @@ public class MonthUtils {
             this.namesOfMonths = namesOfMonths;
             this.days = days;
             this.workingDays = workingDays;
-
         }
 
         public String getNamesOfMonths() {
@@ -32,6 +31,7 @@ public class MonthUtils {
     }
 
 
+
     public static final Month JANUARY = new Month("January", 31, 15);
     public static final Month FEBRUARY = new Month("February", 28, 20);
     public static final Month MARCH = new Month("March", 31, 15);
@@ -45,6 +45,14 @@ public class MonthUtils {
     public static final Month NOVEMBER = new Month("November", 30, 20);
     public static final Month DECEMBER = new Month("December", 31, 20);
 
+    public static final Month[] YEAR = new Month[] {
+            JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE,
+            JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER
+    };
+
+    public static Month[] getYear() {
+        return YEAR;
+    }
 
 
     public static final Month[] QUARTER1 = new Month[] {JANUARY, FEBRUARY, MARCH};
@@ -52,9 +60,18 @@ public class MonthUtils {
     public static final Month[] QUARTER3 = new Month[] {JULY, AUGUST, SEPTEMBER};
     public static final Month[] QUARTER4 = new Month[] {OCTOBER, NOVEMBER, DECEMBER};
 
-    public static Month[] HALFYEARFIRST = new Month[] {JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE};
-    public static Month[] HALFYEARSECOND = new Month[] {JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER};
-
+    public static Month[] getQuarter1() {
+        return QUARTER1;
+    }
+    public static Month[] getQuarter2() {
+        return QUARTER2;
+    }
+    public static Month[] getQuarter3() {
+        return QUARTER3;
+    }
+    public static Month[] getQuarter4() {
+        return QUARTER4;
+    }
 
     public static Month[] getYearQuarter(int numberQuarter) {
         if (numberQuarter == 1) {
@@ -69,11 +86,24 @@ public class MonthUtils {
     }
 
 
+    public static Month[] HALFYEARFIRST = new Month[] {JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE};
+    public static Month[] HALFYEARSECOND = new Month[] {JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER};
+
+    public static Month[] getHALFYEARFIRST() {
+        return HALFYEARFIRST;
+    }
+
+    public static Month[] getHALFYEARSECOND() {
+        return HALFYEARSECOND;
+    }
+
     public static Month[] getHalfYear(int halfNumber) {
         if (halfNumber == 1) {
             return HALFYEARFIRST;
         } else if (halfNumber == 2) {
             return HALFYEARSECOND;
-        } return new Month[0];
+        } else {
+            return null;
+        }
     }
 }
