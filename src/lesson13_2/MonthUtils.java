@@ -6,18 +6,44 @@ package lesson13_2;
 соответственно), полугодия и год.
 */
 public class MonthUtils {
-    public static final Month JANUARY = new Month("January", 31, 15, 1);
-    public static final Month FEBRUARY = new Month("February", 28, 20,2);
-    public static final Month MARCH = new Month("March", 31, 15,3);
-    public static final Month APRIL = new Month("April", 30, 20,4);
-    public static final Month MAY = new Month("May", 31, 20,5);
-    public static final Month JUNE = new Month("June", 30, 20,6);
-    public static final Month JULY = new Month("July", 31, 20,7);
-    public static final Month AUGUST = new Month("August", 31, 20,8);
-    public static final Month SEPTEMBER = new Month("September", 30, 20,9);
-    public static final Month OCTOBER = new Month("October", 31, 20,10);
-    public static final Month NOVEMBER = new Month("November", 30, 20,11);
-    public static final Month DECEMBER = new Month("December", 31, 20,12);
+    public static class Month {
+        private final String namesOfMonths;
+        private final int days;
+        private final int workingDays;
+
+        private Month(String namesOfMonths, int days, int workingDays) {
+            this.namesOfMonths = namesOfMonths;
+            this.days = days;
+            this.workingDays = workingDays;
+
+        }
+
+        public String getNamesOfMonths() {
+            return namesOfMonths;
+        }
+
+        public int getDays() {
+            return days;
+        }
+
+        public int getWorkingDays() {
+            return workingDays;
+        }
+    }
+
+
+    public static final Month JANUARY = new Month("January", 31, 15);
+    public static final Month FEBRUARY = new Month("February", 28, 20);
+    public static final Month MARCH = new Month("March", 31, 15);
+    public static final Month APRIL = new Month("April", 30, 20);
+    public static final Month MAY = new Month("May", 31, 20);
+    public static final Month JUNE = new Month("June", 30, 20);
+    public static final Month JULY = new Month("July", 31, 20);
+    public static final Month AUGUST = new Month("August", 31, 20);
+    public static final Month SEPTEMBER = new Month("September", 30, 20);
+    public static final Month OCTOBER = new Month("October", 31, 20);
+    public static final Month NOVEMBER = new Month("November", 30, 20);
+    public static final Month DECEMBER = new Month("December", 31, 20);
 
 
 
