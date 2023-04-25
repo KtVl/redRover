@@ -11,6 +11,12 @@ public class Collections {
         list.add(new Employee("Sally", 150));
         list.sort(new SalaryComparator()); //сортировка
         printList(list);
+
+        LinkedList<Integer> ints = new LinkedList<>();
+        ints.add(1);
+        ints.add(4);
+        ints.add(9);
+        printList(ints);
     }
 
     static class Employee {
@@ -38,6 +44,12 @@ public class Collections {
         public void setSalary(int salary) {
             this.salary = salary;
         }
+
+        @Override
+        public String toString() {
+            return "name = '" + name + '\'' +
+                    ", salary = " + salary;
+        }
     }
 
     static class SalaryComparator implements Comparator<Employee> {
@@ -47,9 +59,9 @@ public class Collections {
         }
     }
 
-    public static void printList(LinkedList<Employee> list){
-        for (Employee s: list) {
-            System.out.println(s.getName() + ": " + s.getSalary());
+    public static <T> void printList(LinkedList<T> list){
+        for (T t: list) {
+            System.out.println(t.toString());
         }
     }
 }
