@@ -11,6 +11,8 @@ public class Homework2 {
         extraTask(a,b);
         System.out.println("________________");
         extraTask2();
+
+        divideTheLoot();
     }
 
 //    Задача №1
@@ -38,6 +40,24 @@ public class Homework2 {
     public static void extraTask2() {
         String smile = "\uD83D\uDE00";
         System.out.println(smile);
+
+    }
+
+    /*Создать программу дележа добычи на пиратском корабле. По обычаю, половина добычи идет владельцу корабля,
+    половина оставшегося — капитану, остальное делится поровну между всеми членами команды, включая капитана.
+    Размер добычи (например, в пиастрах) и количество пиратов на корабле задать переменными.
+    Вывести на экран кому сколько пиастров полагается.*/
+
+    public static void divideTheLoot() {
+        double miningSize = 100;
+        double numberOfPirates = 10;
+        double shipOwner = miningSize / 2;
+        double captain = shipOwner / 2;
+        double teamMembers = captain / numberOfPirates;
+
+        System.out.println("владельцу: " + shipOwner + "\n"
+                + "капитану: " + (captain + teamMembers) +"\n"
+                + "каждому члену корабля: " + teamMembers);
 
     }
 }
