@@ -7,6 +7,7 @@ public class TasksWithStrings {
         stringToArray("I love arrays they are my favorite");
         System.out.println(strCount("hello", 'l'));
         System.out.println(correct("заменить все единицы на 11, на пятёрки на 55"));
+        System.out.println(correct2("заменить все единицы на 11, на пятёрки на 55"));
     }
 
     // Напишите функцию, которая разбивает строку и преобразует ее в массив слов.
@@ -46,6 +47,11 @@ public class TasksWithStrings {
             string = string.replaceAll("1", "I");
         }
         return string;
+    }
+
+    // или короче второй вариант
+    public static String correct2(String string) {
+        return string.replace("5","S").replace("0", "O").replace("1","I");
     }
 }
 
