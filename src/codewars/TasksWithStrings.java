@@ -1,5 +1,6 @@
 package codewars;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 public class TasksWithStrings {
@@ -8,6 +9,7 @@ public class TasksWithStrings {
         System.out.println(strCount("hello", 'l'));
         System.out.println(correct("заменить все единицы на 11, на пятёрки на 55"));
         System.out.println(correct2("заменить все единицы на 11, на пятёрки на 55"));
+        System.out.println(add("500", "610"));
     }
 
     // Напишите функцию, которая разбивает строку и преобразует ее в массив слов.
@@ -52,6 +54,19 @@ public class TasksWithStrings {
     // или короче второй вариант
     public static String correct2(String string) {
         return string.replace("5","S").replace("0", "O").replace("1","I");
+    }
+
+
+    //Напишите функцию, возвращающую сумму двух чисел.
+    // Входные числа представляют собой строки, и функция должна возвращать строку.
+    //add("123", "321"); -> "444"
+    //add("11", "99");   -> "110"
+    public static String add(String a, String b) {
+        BigInteger firstValue = new BigInteger(a);
+        BigInteger secondValue = new BigInteger(b);
+        BigInteger resultValue =  firstValue.add(secondValue);
+        String str = resultValue.toString();
+        return str;
     }
 }
 
