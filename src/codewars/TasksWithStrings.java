@@ -10,6 +10,9 @@ public class TasksWithStrings {
         System.out.println(correct("заменить все единицы на 11, на пятёрки на 55"));
         System.out.println(correct2("заменить все единицы на 11, на пятёрки на 55"));
         System.out.println(add("500", "610"));
+        System.out.println("------");
+        System.out.println(areYouPlayingBanjo("Martin"));
+        System.out.println(areYouPlayingBanjo("Rikke"));
     }
 
     // Напишите функцию, которая разбивает строку и преобразует ее в массив слов.
@@ -67,6 +70,19 @@ public class TasksWithStrings {
         BigInteger resultValue =  firstValue.add(secondValue);
         String str = resultValue.toString();
         return str;
+    }
+
+    //Создайте функцию, которая отвечает на вопрос «Вы играете на банджо?».
+    //Если ваше имя начинается с буквы «R» или строчной «r», вы играете на банджо!
+    //Функция принимает имя в качестве единственного аргумента и возвращает одну из следующих строк:
+    //name + " plays banjo"
+    //name + " does not play banjo"
+    public static String areYouPlayingBanjo(String name) {
+        if (Character.toLowerCase(name.toCharArray()[0]) == 'r') {
+            return name + " plays banjo";
+        } else {
+            return name + " does not play banjo";
+        }
     }
 }
 
