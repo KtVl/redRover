@@ -6,6 +6,8 @@ public class TasksWithArrays {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(between(1,4)));
         System.out.println(Arrays.toString(digitize(12345)));
+        String str = "11 34 3 45 23 5 67";
+        System.out.println(Arrays.toString(stringInInt(str)));
     }
 
     //Завершите функцию, которая принимает два целых числа ( a, b, где a < b),
@@ -31,5 +33,14 @@ public class TasksWithArrays {
             result = result + array[i];
         }
         return result.toCharArray();
+    }
+
+    //на вход дана строка. вывести в качестве массива int
+    public static int[] stringInInt(String str) {
+        String strArr[] = str.split(" ");
+        int numArr[] = new int[strArr.length];
+        for (int i = 0; i < strArr.length; i++) {
+            numArr[i] = Integer.parseInt(strArr[i]);
+        } return numArr;
     }
 }
