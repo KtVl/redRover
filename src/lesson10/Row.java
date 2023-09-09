@@ -8,4 +8,12 @@ public class Row {
         this.studentName = studentName;
         grades = new Integer[numberOfLessons];
     }
+
+    public void giveGrade(int lessonNumber, Integer grade) {
+        grades[lessonNumber - 1] = grade;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
 }
