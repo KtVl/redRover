@@ -11,5 +11,7 @@ public class Main {
         );
 
         System.out.println(biology7a.getNumberOfStudents());
+        biology7a.giveGrade("Ivanov", 1, 5);
+        biology7a.print();
     }
 }

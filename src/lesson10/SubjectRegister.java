@@ -38,4 +38,13 @@ public class SubjectRegister {
         }
         return null;
     }
+
+    //печать журнала
+    public void print() {
+        System.out.println("-------------");
+        for (int i = 0; i < rows.length; i++) {
+            System.out.println(rows[i].printTable());
+        }
+        System.out.println("-------------");
+    }
 }

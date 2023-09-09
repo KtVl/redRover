@@ -1,5 +1,7 @@
 package lesson10;
 
+import java.util.Arrays;
+
 public class Row {
      String studentName;
      Integer[] grades;
@@ -15,5 +17,9 @@ public class Row {
 
     public String getStudentName() {
         return studentName;
+    }
+
+    public String printTable() {
+        return "| " + studentName + Arrays.toString(grades);
     }
 }
