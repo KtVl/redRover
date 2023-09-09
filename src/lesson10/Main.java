@@ -9,5 +9,7 @@ public class Main {
                         "Sidorov"
                 }, 20
         );
+
+        System.out.println(biology7a.getNumberOfStudents());
     }
 }
